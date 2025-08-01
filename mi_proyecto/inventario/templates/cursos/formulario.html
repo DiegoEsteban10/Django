@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ modo }} Curso</h2>
+<form method="post">
+    {% csrf_token %}
+
+    {% if form.errors %}
+    <div style="color: red;">
+        <h4>Errores en el formulario:</h4>
+        {{ form.errors }}
+    </div>
+{% endif %}
+
+
+    <p>
+        {{ form.nombre.label_tag }}<br>
+        {{ form.nombre }}
+    </p>
+
+    <p>
+        {{ form.cupos.label_tag }}<br>
+        {{ form.cupos }}
+    </p>
+
+    <p>
+        {{ form.precio.label_tag }}<br>
+        {{ form.precio }}
+    </p>
+
+    <p>
+    {{ form.fecha_inicio.label_tag }}<br>
+    <input 
+        type="date" 
+        name="fecha_inicio" 
+        value="{{ form.fecha_inicio.value|default:'' }}"
+        min="{{ today }}"
+        required>
+    </p>
+
+    <button class="btn" type="submit">Guardar</button>
+</form>
+<a class="btn" href="{% url 'curso_listado' %}">Volver al listado</a>
+{% endblock %}

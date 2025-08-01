@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Detalle del Curso</h2>
+<p><strong>Nombre:</strong> {{ curso.nombre }}</p>
+<p><strong>Precio:</strong> ${{ curso.precio }}</p>
+<p><strong>Cupos:</strong> {{ curso.cupos }}</p>
+<p><strong>Fecha de Inicio:</strong> {{ curso.fecha_inicio }}</p>
+
+<a class="btn" href="{% url 'curso_editar' curso.pk %}">Editar</a>
+<a class="btn" href="{% url 'curso_eliminar' curso.pk %}">Eliminar</a>
+<a class="btn" href="{% url 'curso_listado' %}">Volver al listado</a>
+{% endblock %}
