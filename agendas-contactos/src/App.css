@@ -1,0 +1,127 @@
+/* Fuente general */
+body {
+  font-family: 'Quicksand', 'Segoe UI', sans-serif;
+  background-color: #f7f3f0;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #4a3f35;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+h1::before {
+  content: "🏡 ";
+}
+
+/* Contenedor general de la app */
+.agenda-app {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.formulario-contacto input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formulario-contacto button {
+  padding: 10px;
+  background-color: #8bc34a;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #7cb342;
+}
+
+/* Lista de contactos */
+.lista-contactos {
+  margin-top: 20px;
+}
+
+.lista-contactos ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Contacto individual */
+.contacto {
+  background-color: #fdf6f0;
+  border: 1px solid #e0d4c1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contacto button {
+  padding: 6px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacto button:hover {
+  background-color: #d32f2f;
+}
+
+/* Buscador */
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+/* Subtítulos */
+h2 {
+  color: #5c4430;
+  font-weight: 600;
+}
